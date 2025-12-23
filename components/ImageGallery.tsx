@@ -1,0 +1,70 @@
+'use client'
+
+import { useState } from 'react'
+import Image from 'next/image'
+import Lightbox from './Lightbox'
+
+interface Photo {
+  id: string
+  title: string
+  description: string
+  category: string
+  location: string
+  url: string
+  thumbnail: string
+  alt: string
+  downloadUrl: string
+  date: string
+}
+
+interface ImageGalleryProps {
+  photos: Photo[]
+  columns?: number
+}
+
+export default function ImageGallery({ photos, columns = 3 }: ImageGalleryProps) {
+  const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null)
+
+  const gridColsClass = columns === 2 
+    ? 'lg:grid-cols-2' 
+    : columns === 4 
+    ? 'lg:grid-cols-4' 
+    : 'lg:grid-cols-3'
+
+  return (
+    <>
+      <div className={`grid grid-cols-1 md:grid-cols-2 ${gridColsClass} gap-4`}>
+        {photos.map((photo) => (
+          <div
+            key={photo.id}
+            className="relative group cursor-pointer overflow-hidden rounded-lg aspect-square"
+            onClick={() => setSelectedPhoto(photo)}
+          >
+            <Image
+              src={photo.thumbnail}
+              alt={photo.alt}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center px-4">
+                <h3 className="font-semibold text-lg mb-1">{photo.title}</h3>
+                <p className="text-sm">{photo.location}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      {selectedPhoto && (
+        <Lightbox
+          photo={selectedPhoto}
+          onClose={() => setSelectedPhoto(null)}
+        />
+      )}
+    </>
+  )
+}
+
