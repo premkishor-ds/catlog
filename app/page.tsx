@@ -115,7 +115,7 @@ export default function Home() {
               <span className="block text-primary-700 mt-2">in {siteData.photographer.location.city}</span>
             </h1>
             <p className="text-lg md:text-xl text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
-              Award-winning photographer capturing life's most precious moments. Specializing in weddings, events, portraits, and commercial photography.
+              Award-winning photographer capturing life&apos;s most precious moments. Specializing in weddings, events, portraits, and commercial photography.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -171,7 +171,7 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-text-secondary mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-text-secondary mb-4 italic">&quot;{testimonial.text}&quot;</p>
                 <div>
                   <p className="font-semibold text-text-primary">{testimonial.name}</p>
                   <p className="text-sm text-text-secondary">{testimonial.role}</p>
@@ -259,7 +259,7 @@ export default function Home() {
               Ready to Capture Your Story?
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Let's create something beautiful together. Book your photography or videography session today.
+              Let&apos;s create something beautiful together. Book your photography or videography session today.
             </p>
             <Link
               href="/contact"

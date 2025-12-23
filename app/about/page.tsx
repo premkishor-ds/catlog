@@ -194,7 +194,7 @@ export default function AboutPage() {
                 href="/contact"
                 className="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 inline-block"
               >
-                Let's Work Together
+                Let&apos;s Work Together
               </a>
             </div>
             </div>

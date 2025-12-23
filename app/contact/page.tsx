@@ -62,8 +62,8 @@ export default function ContactPage() {
               Get In Touch
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Ready to capture your story? Let's discuss your photography or videography project. 
-              I'm here to help bring your vision to life.
+              Ready to capture your story? Let&apos;s discuss your photography or videography project. 
+              I&apos;m here to help bring your vision to life.
             </p>
           </header>
 

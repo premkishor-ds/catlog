@@ -153,7 +153,7 @@ export default function GalleryFilter() {
           <span className="font-semibold text-gray-900">{filteredPhotos.length}</span> photos
           {searchQuery && (
             <span className="ml-2">
-              for "<span className="font-semibold text-gray-900">{searchQuery}</span>"
+              for &quot;<span className="font-semibold text-gray-900">{searchQuery}</span>&quot;
             </span>
           )}
         </p>
