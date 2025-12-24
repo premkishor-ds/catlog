@@ -141,7 +141,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
             </section>
           )}
 
-          <section className="mt-16 bg-primary-50 rounded-xl p-8 border border-primary-100 shadow-lg bg-pattern-waves relative">
+          <section className="mt-16 bg-primary-50 rounded-xl p-8 border border-primary-100 shadow-lg relative">
             <div className="absolute inset-0 bg-primary-50/90" />
             <div className="relative z-10">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 flex items-center gap-3">

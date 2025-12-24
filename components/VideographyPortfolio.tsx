@@ -5,7 +5,7 @@ import videosData from '@/data/videos.json'
 
 export default function VideographyPortfolio() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-primary-50 py-24">
       <div className="container mx-auto px-4 mb-12">
         <div className="flex flex-col md:flex-row justify-between items-end gap-6">
           <div className="max-w-2xl">

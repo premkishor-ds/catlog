@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <article className="py-20 bg-white bg-pattern-grid relative">
+    <article className="py-20 bg-white relative">
       <div className="absolute inset-0 bg-white/95" />
       <div className="container mx-auto px-4 relative z-10">
         <header className="text-center mb-12">

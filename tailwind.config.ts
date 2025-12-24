@@ -13,35 +13,36 @@ const config: Config = {
         foreground: 'var(--foreground)',
         // Conversion-focused color palette
         primary: {
-          DEFAULT: '#1E40AF', // Primary Blue (Trust)
-          50: '#EFF6FF',
-          100: '#DBEAFE',
-          200: '#BFDBFE',
-          300: '#93C5FD',
-          400: '#60A5FA',
-          500: '#3B82F6',
-          600: '#2563EB',
-          700: '#1E40AF', // Main primary
-          800: '#1E3A8A',
-          900: '#1E293B',
+          DEFAULT: '#d4af37', // Metallic Gold (True Gold, no orange)
+          50: '#f9f7f1',      // Champagne/Cream
+          100: '#f2ecd9',
+          200: '#e6d8ae',
+          300: '#d9c482',
+          400: '#ccb058',
+          500: '#d4af37',     // Classic Gold
+          600: '#aa8c2c',
+          700: '#887023',
+          800: '#715d26',
+          900: '#604e25',
+          950: '#352910',
         },
         cta: {
-          DEFAULT: '#F97316', // CTA Orange (Action)
-          50: '#FFF7ED',
-          100: '#FFEDD5',
-          200: '#FED7AA',
-          300: '#FDBA74',
-          400: '#FB923C',
-          500: '#F97316', // Main CTA
-          600: '#EA580C',
-          700: '#C2410C',
+          DEFAULT: '#b48325', // Deep Bronze (No Orange)
+          50: '#fbf7ed',
+          100: '#f5ebd4',
+          200: '#edd5a3',
+          300: '#e0b86b',
+          400: '#cf9d3e',
+          500: '#b48325', // Main CTA
+          600: '#96661c',
+          700: '#785016',
         },
         text: {
           primary: '#0F172A', // Primary Text (Dark)
           secondary: '#475569', // Secondary Text (Gray)
         },
         bg: {
-          section: '#F1F5F9', // Section Background (Light Gray)
+          section: '#f9f7f1', // Section Background (Warm Cream/Champagne)
         },
         success: '#22C55E', // Success / Highlight
       },

@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-pattern-dots opacity-20" />
+      <div className="absolute inset-0 opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-900/10 to-transparent" />
       
       <div className="container mx-auto px-4 py-12 relative z-10">

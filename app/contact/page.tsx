@@ -96,7 +96,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="mt-8 bg-primary-50 rounded-lg p-6 border border-primary-100 bg-pattern-diagonal relative">
+              <div className="mt-8 bg-primary-50 rounded-lg p-6 border border-primary-100 relative">
                 <div className="absolute inset-0 bg-primary-50/90" />
                 <div className="relative z-10">
                 <h3 className="font-semibold text-gray-900 mb-4 flex items-center gap-2">
