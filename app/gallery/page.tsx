@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import GalleryFilter from '@/components/GalleryFilter'
-import CTASection from '@/components/CTASection'
 import siteData from '@/data/site.json'
 
 export const metadata: Metadata = {
@@ -40,7 +39,6 @@ export default function GalleryPage() {
 
         <GalleryFilter />
       </div>
-      <CTASection />
     </article>
   )
 }

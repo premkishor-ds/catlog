@@ -3,7 +3,7 @@ import Image from 'next/image'
 import siteData from '@/data/site.json'
 import BenefitsSection from '@/components/BenefitsSection'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import CTASection from '@/components/CTASection'
+
 
 export const metadata: Metadata = {
   title: `About ${siteData.photographer.name} | Professional Photographer & Videographer in ${siteData.photographer.location.city}`,
@@ -161,7 +161,7 @@ export default function AboutPage() {
           
           <TestimonialsSection />
 
-          <CTASection />
+
         </div>
       </article>
     </>

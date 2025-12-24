@@ -31,7 +31,7 @@ export default function VideographyPortfolio() {
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
           {/* Show 16 videos for 4x4 grid */}
           {[...videosData.videos, ...videosData.videos, ...videosData.videos].slice(0, 16).map((video, index) => (

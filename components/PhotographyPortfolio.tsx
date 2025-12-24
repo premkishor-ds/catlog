@@ -29,7 +29,7 @@ export default function PhotographyPortfolio() {
         </div>
       </div>
         
-      <div className="w-full">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-3 md:grid-cols-6 gap-1">
           {/* Repeat photos to ensure we fill the 6x4 grid (24 items) if needed */}
           {[...photosData.photos, ...photosData.photos].slice(0, 24).map((photo, index) => (

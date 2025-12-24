@@ -1,16 +1,16 @@
 {
   "photographer": {
-    "name": "Rahul Sharma",
-    "businessName": "Sharma Visual Arts",
+    "name": "Alex Morgan",
+    "businessName": "Luxe Lens Studio",
     "tagline": "Capturing Life's Most Precious Moments",
     "bio": "Award-winning professional photographer and cinematic videographer with over 10 years of experience. Specializing in weddings, travel, sports, and commercial photography. Based in Mumbai, serving clients across India and internationally.",
     "location": {
-      "city": "Mumbai",
-      "state": "Maharashtra",
-      "country": "India",
-      "address": "123 Photography Lane, Bandra West, Mumbai, Maharashtra 400050",
-      "phone": "+91 98765 43210",
-      "email": "contact@sharmavisualarts.com",
+      "city": "New York",
+      "state": "NY",
+      "country": "USA",
+      "address": "123 Creative Avenue, New York, NY 10001",
+      "phone": "+1 (555) 123-4567",
+      "email": "contact@luxelensstudio.com",
       "serviceAreas": [
         "Mumbai",
         "Delhi",
@@ -43,9 +43,9 @@
     "style": "My photography style blends documentary authenticity with artistic elegance. I capture genuine emotions and moments that tell your unique story. Whether it's a wedding, a travel adventure, or a commercial shoot, I bring a cinematic eye to every frame."
   },
   "seo": {
-    "defaultTitle": "Professional Photography & Videography Services | Sharma Visual Arts",
-    "defaultDescription": "Award-winning photographer and videographer specializing in weddings, travel, sports, events, portraits, and product photography. Serving Mumbai, Maharashtra and all across India.",
-    "keywords": "photographer Mumbai, videographer Mumbai, wedding photographer India, travel photography, sports photography, event photography, portrait photography, product photography, Mumbai photographer, Maharashtra photographer, Indian wedding photographer"
+    "defaultTitle": "Professional Photography & Videography Services | Luxe Lens Studio",
+    "defaultDescription": "Award-winning photographer and videographer specializing in weddings, travel, sports, events, portraits, and product photography.",
+    "keywords": "professional photographer, cinematic videographer, wedding photography, travel photography, sports photography, event photography, portrait photography, product photography"
   }
 }
 

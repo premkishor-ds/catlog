@@ -6,7 +6,7 @@ import BenefitsSection from '@/components/BenefitsSection'
 import PhotographyPortfolio from '@/components/PhotographyPortfolio'
 import VideographyPortfolio from '@/components/VideographyPortfolio'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import CTASection from '@/components/CTASection'
+
 
 export const metadata: Metadata = {
   title: `${siteData.photographer.businessName} | Professional Photography & Videography Services`,
@@ -39,7 +39,6 @@ export default function Home() {
       <PhotographyPortfolio />
       <VideographyPortfolio />
       <TestimonialsSection />
-      <CTASection />
     </>
   )
 }
