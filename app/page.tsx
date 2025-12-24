@@ -32,8 +32,50 @@ export const metadata: Metadata = {
 const sliderPhotos = photosData.photos.slice(0, 12)
 
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'PhotographyBusiness',
+    name: siteData.photographer.businessName,
+    image: 'https://sharmavisualarts.com/hero-image.jpg',
+    description: siteData.photographer.bio,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: siteData.photographer.location.address,
+      addressLocality: siteData.photographer.location.city,
+      addressRegion: siteData.photographer.location.state,
+      postalCode: '10001',
+      addressCountry: siteData.photographer.location.country,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 40.7128,
+      longitude: -74.0060
+    },
+    url: 'https://sharmavisualarts.com',
+    telephone: siteData.photographer.location.phone,
+    priceRange: '$$$',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday'
+        ],
+        opens: '09:00',
+        closes: '18:00'
+      }
+    ]
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <HeroSlider photos={sliderPhotos} />
       <BenefitsSection />
       <PhotographyPortfolio />

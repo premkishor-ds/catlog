@@ -1,0 +1,25 @@
+# Luxe Lens Studio
+
+> Professional Photography & Videography Services in New York, USA.
+
+## About Us
+Luxe Lens Studio (Lead Photographer: Alex Morgan) is an award-winning creative studio specializing in capturing life's most precious moments with artistic elegance and cinematic storytelling.
+
+## Services
+- **Wedding Photography & Videography**: Cinematic wedding films and timeless photo albums.
+- **Travel Documentaries**: Breathtaking travel content for brands and creators.
+- **Sports Photography**: High-energy action shots and highlights.
+- **Commercial & Product**: Professional visual content for businesses.
+- **Portrait Sessions**: Artistic individual and family portraits.
+
+## Contact
+- **Location**: New York, NY, USA
+- **Email**: contact@luxelensstudio.com
+- **Phone**: +1 (555) 123-4567
+
+## Navigation
+- [Home](https://sharmavisualarts.com/)
+- [About Alex Morgan](https://sharmavisualarts.com/about)
+- [Photo Gallery](https://sharmavisualarts.com/gallery)
+- [Videography](https://sharmavisualarts.com/videography)
+- [Contact Us](https://sharmavisualarts.com/contact)
