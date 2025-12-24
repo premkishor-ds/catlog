@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import siteData from '@/data/site.json'
 import photosData from '@/data/photos.json'
+import HeroSlider from '@/components/HeroSlider'
 
 export const metadata: Metadata = {
   title: `${siteData.photographer.businessName} | Professional Photography & Videography Services`,
@@ -103,78 +104,49 @@ const testimonials = [
   },
 ]
 
+// Top 12 photos for the slider
+const sliderPhotos = photosData.photos.slice(0, 12)
+
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-white py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-primary mb-6 leading-tight">
-              Professional Photography & Videography
-              <span className="block text-primary-700 mt-2">in {siteData.photographer.location.city}</span>
-            </h1>
-            <p className="text-lg md:text-xl text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
-              Award-winning photographer capturing life&apos;s most precious moments. Specializing in weddings, events, portraits, and commercial photography.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                href="/contact"
-                className="bg-cta-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cta-600 transition-colors shadow-lg hover:shadow-xl min-h-[44px] flex items-center justify-center w-full sm:w-auto"
-              >
-                Book Your Session Now
-              </Link>
-              <Link
-                href="/gallery"
-                className="border-2 border-primary-700 text-primary-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-50 transition-colors min-h-[44px] flex items-center justify-center w-full sm:w-auto"
-              >
-                View Our Work
-              </Link>
-            </div>
-            <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-sm text-text-secondary">
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>10+ Years Experience</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>500+ Happy Clients</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>Award-Winning</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSlider photos={sliderPhotos} />
 
       {/* Social Proof / Testimonials */}
-      <section className="bg-bg-section py-16">
+      {/* Social Proof / Testimonials */}
+      <section className="bg-bg-section py-20 bg-pattern-dots">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary text-center mb-12">
-            Trusted by Clients Across India
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4">
+              Trusted by Clients
+            </h2>
+            <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex gap-1 mb-4">
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 relative border border-gray-100">
+                <div className="absolute top-8 right-8 text-primary-100">
+                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21L14.017 18C14.017 16.0547 14.3314 14.6593 14.9603 13.8139C15.5891 12.9685 16.8906 12.1818 18.8647 11.454L18.8647 8.5C16.9412 8.5 15.3529 7.89091 14.1 6.67273C12.8471 5.45455 12.2206 3.89091 12.2206 1.98182L9.27941 1.98182C9.27941 2.5 9.22059 3.01818 9.10294 3.53636C8.98529 4.05455 8.92647 4.54545 8.92647 5.00909C8.92647 7.02727 9.48529 8.95455 10.6029 10.7909C11.7206 12.6273 13.75 14.0909 16.6912 15.1818V21H14.017ZM5.15294 21L5.15294 18C5.15294 16.0547 5.46745 14.6593 6.09628 13.8139C6.7251 12.9685 8.02667 12.1818 10 11.454L10 8.5C8.07706 8.5 6.48882 7.89091 5.23529 6.67273C3.98235 5.45455 3.35588 3.89091 3.35588 1.98182L0.414706 1.98182C0.414706 2.5 0.355882 3.01818 0.238235 3.53636C0.120588 4.05455 0.0617647 4.54545 0.0617647 5.00909C0.0617647 7.02727 0.620588 8.95455 1.73824 10.7909C2.85588 12.6273 4.88529 14.0909 7.82647 15.1818V21H5.15294Z" />
+                  </svg>
+                </div>
+                <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-cta-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={i} className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
-                <p className="text-text-secondary mb-4 italic">&quot;{testimonial.text}&quot;</p>
-                <div>
-                  <p className="font-semibold text-text-primary">{testimonial.name}</p>
-                  <p className="text-sm text-text-secondary">{testimonial.role}</p>
+                <p className="text-text-secondary mb-6 italic leading-relaxed relative z-10">&quot;{testimonial.text}&quot;</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold">
+                    {testimonial.name[0]}
+                  </div>
+                  <div>
+                    <p className="font-bold text-text-primary">{testimonial.name}</p>
+                    <p className="text-sm text-text-secondary">{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -183,20 +155,21 @@ export default function Home() {
       </section>
 
       {/* Key Benefits */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
               Why Choose Us?
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              We deliver exceptional photography and videography services that exceed expectations
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              We deliver exceptional photography and videography services that exceed expectations,
+              combining artistic vision with professional execution.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow">
-                <div className="text-primary-700 mb-4">
+              <div key={index} className="bg-white rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300 border border-gray-100 shadow-sm hover:shadow-xl group">
+                <div className="w-14 h-14 bg-primary-50 rounded-2xl flex items-center justify-center text-primary-600 mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors">
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-bold text-text-primary mb-3">
@@ -212,41 +185,53 @@ export default function Home() {
       </section>
 
       {/* Featured Work Preview */}
-      <section className="bg-bg-section py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              Our Recent Work
-            </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              Explore our portfolio of stunning photography and videography
-            </p>
+      <section className="bg-bg-section py-24 relative overflow-hidden">
+        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-white to-transparent" />
+        <div className="container mx-auto px-4 relative">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
+                Captured Moments
+              </h2>
+              <p className="text-lg text-text-secondary leading-relaxed">
+                Explore our portfolio of stunning photography and videography, showcasing love, life, and brands from across India.
+              </p>
+            </div>
+            <Link
+              href="/gallery"
+              className="group flex items-center gap-2 text-primary-600 font-bold hover:text-primary-700 transition-colors"
+            >
+              View Full Gallery
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            {photosData.photos.slice(0, 8).map((photo) => (
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
+            {photosData.photos.slice(0, 8).map((photo, index) => (
               <Link
                 key={photo.id}
                 href="/gallery"
-                className="relative aspect-square overflow-hidden rounded-lg group"
+                className={`relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 ${
+                  index === 0 || index === 7 ? 'md:col-span-2 md:row-span-2 aspect-square md:aspect-auto' : 'aspect-square'
+                }`}
               >
                 <Image
                   src={photo.thumbnail}
                   alt={photo.alt}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="font-bold text-lg mb-1">{photo.title}</p>
+                    <p className="text-sm text-white/80 capitalize">{photo.category}</p>
+                  </div>
+                </div>
               </Link>
             ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link
-              href="/gallery"
-              className="inline-block border-2 border-primary-700 text-primary-700 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors min-h-[44px]"
-            >
-              View Full Gallery
-            </Link>
           </div>
         </div>
       </section>

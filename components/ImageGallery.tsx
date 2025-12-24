@@ -15,6 +15,13 @@ interface Photo {
   alt: string
   downloadUrl: string
   date: string
+  details?: {
+    camera: string
+    lens: string
+    aperture: string
+    shutterSpeed: string
+    iso: number
+  }
 }
 
 interface ImageGalleryProps {

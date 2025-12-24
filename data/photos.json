@@ -10,7 +10,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80",
       "alt": "Romantic sunset wedding ceremony in Napa Valley with bride and groom",
       "downloadUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?w=2400&q=95",
-      "date": "2024-03-15"
+      "date": "2024-03-15",
+      "details": {
+        "camera": "Sony A7 IV",
+        "lens": "FE 85mm f/1.4 GM",
+        "aperture": "f/1.8",
+        "shutterSpeed": "1/250s",
+        "iso": 200
+      }
     },
     {
       "id": "wedding-002",
@@ -22,7 +29,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&q=80",
       "alt": "Elegant indoor wedding reception with beautiful lighting and decor",
       "downloadUrl": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=2400&q=95",
-      "date": "2024-02-20"
+      "date": "2024-02-20",
+      "details": {
+        "camera": "Sony A7 IV",
+        "lens": "FE 85mm f/1.4 GM",
+        "aperture": "f/1.8",
+        "shutterSpeed": "1/250s",
+        "iso": 100
+      }
     },
     {
       "id": "wedding-003",
@@ -34,7 +48,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&q=80",
       "alt": "Beach wedding ceremony with ocean waves in the background",
       "downloadUrl": "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=2400&q=95",
-      "date": "2024-01-10"
+      "date": "2024-01-10",
+      "details": {
+        "camera": "Sony A7 IV",
+        "lens": "FE 85mm f/1.4 GM",
+        "aperture": "f/1.8",
+        "shutterSpeed": "1/250s",
+        "iso": 200
+      }
     },
     {
       "id": "travel-001",
@@ -46,7 +67,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80",
       "alt": "Stunning mountain landscape in Swiss Alps at sunrise",
       "downloadUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2400&q=95",
-      "date": "2024-04-05"
+      "date": "2024-04-05",
+      "details": {
+        "camera": "Sony A7 III",
+        "lens": "FE 35mm f/1.4 GM",
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/60s",
+        "iso": 1600
+      }
     },
     {
       "id": "travel-002",
@@ -58,7 +86,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?w=400&q=80",
       "alt": "Modern Tokyo city skyline during golden hour",
       "downloadUrl": "https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?w=2400&q=95",
-      "date": "2024-03-22"
+      "date": "2024-03-22",
+      "details": {
+        "camera": "Sony A7 III",
+        "lens": "FE 35mm f/1.4 GM",
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/60s",
+        "iso": 100
+      }
     },
     {
       "id": "travel-003",
@@ -70,7 +105,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80",
       "alt": "Tropical paradise beach with crystal clear turquoise waters",
       "downloadUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=2400&q=95",
-      "date": "2024-02-14"
+      "date": "2024-02-14",
+      "details": {
+        "camera": "Sony A7 III",
+        "lens": "FE 35mm f/1.4 GM",
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/60s",
+        "iso": 100
+      }
     },
     {
       "id": "sports-001",
@@ -82,7 +124,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80",
       "alt": "Dynamic basketball player in action during game",
       "downloadUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=2400&q=95",
-      "date": "2024-03-30"
+      "date": "2024-03-30",
+      "details": {
+        "camera": "Sony A9 II",
+        "lens": "FE 70-200mm f/2.8 GM",
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/2000s",
+        "iso": 400
+      }
     },
     {
       "id": "sports-002",
@@ -94,7 +143,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&q=80",
       "alt": "Professional soccer player in action during match",
       "downloadUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=2400&q=95",
-      "date": "2024-03-18"
+      "date": "2024-03-18",
+      "details": {
+        "camera": "Sony A9 II",
+        "lens": "FE 70-200mm f/2.8 GM",
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/2000s",
+        "iso": 200
+      }
     },
     {
       "id": "sports-003",
@@ -106,7 +162,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1534158914592-062992fbe900?w=400&q=80",
       "alt": "Professional tennis player serving the ball",
       "downloadUrl": "https://images.unsplash.com/photo-1534158914592-062992fbe900?w=2400&q=95",
-      "date": "2024-02-28"
+      "date": "2024-02-28",
+      "details": {
+        "camera": "Sony A9 II",
+        "lens": "FE 70-200mm f/2.8 GM",
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/2000s",
+        "iso": 800
+      }
     },
     {
       "id": "party-001",
@@ -118,7 +181,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&q=80",
       "alt": "Vibrant birthday party celebration with decorations and guests",
       "downloadUrl": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=2400&q=95",
-      "date": "2024-04-10"
+      "date": "2024-04-10",
+      "details": {
+        "camera": "Sony A7 III",
+        "lens": "FE 35mm f/1.4 GM",
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/60s",
+        "iso": 400
+      }
     },
     {
       "id": "party-002",
@@ -130,7 +200,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&q=80",
       "alt": "Professional corporate event with networking and presentations",
       "downloadUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=2400&q=95",
-      "date": "2024-03-25"
+      "date": "2024-03-25",
+      "details": {
+        "camera": "Sony A7 III",
+        "lens": "FE 35mm f/1.4 GM",
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/60s",
+        "iso": 100
+      }
     },
     {
       "id": "party-003",
@@ -142,7 +219,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&q=80",
       "alt": "Energetic music festival with crowd and stage lighting",
       "downloadUrl": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=2400&q=95",
-      "date": "2024-04-15"
+      "date": "2024-04-15",
+      "details": {
+        "camera": "Sony A7 III",
+        "lens": "FE 35mm f/1.4 GM",
+        "aperture": "f/2.8",
+        "shutterSpeed": "1/60s",
+        "iso": 800
+      }
     },
     {
       "id": "indoor-001",
@@ -154,7 +238,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
       "alt": "Professional studio portrait with professional lighting",
       "downloadUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=2400&q=95",
-      "date": "2024-04-01"
+      "date": "2024-04-01",
+      "details": {
+        "camera": "Sony A7R V",
+        "lens": "FE 90mm f/2.8 Macro",
+        "aperture": "f/8.0",
+        "shutterSpeed": "1/160s",
+        "iso": 100
+      }
     },
     {
       "id": "indoor-002",
@@ -166,7 +257,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&q=80",
       "alt": "Warm family portrait in indoor studio setting",
       "downloadUrl": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=2400&q=95",
-      "date": "2024-03-12"
+      "date": "2024-03-12",
+      "details": {
+        "camera": "Sony A7R V",
+        "lens": "FE 90mm f/2.8 Macro",
+        "aperture": "f/8.0",
+        "shutterSpeed": "1/160s",
+        "iso": 100
+      }
     },
     {
       "id": "indoor-003",
@@ -178,7 +276,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
       "alt": "Professional corporate headshot with clean background",
       "downloadUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=2400&q=95",
-      "date": "2024-02-15"
+      "date": "2024-02-15",
+      "details": {
+        "camera": "Sony A7R V",
+        "lens": "FE 90mm f/2.8 Macro",
+        "aperture": "f/8.0",
+        "shutterSpeed": "1/160s",
+        "iso": 100
+      }
     },
     {
       "id": "product-001",
@@ -190,7 +295,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80",
       "alt": "Professional product photography of luxury watch on white background",
       "downloadUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=2400&q=95",
-      "date": "2024-04-08"
+      "date": "2024-04-08",
+      "details": {
+        "camera": "Sony A7R V",
+        "lens": "FE 90mm f/2.8 Macro",
+        "aperture": "f/8.0",
+        "shutterSpeed": "1/160s",
+        "iso": 100
+      }
     },
     {
       "id": "product-002",
@@ -202,7 +314,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80",
       "alt": "Elegant fashion accessories product photography",
       "downloadUrl": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=2400&q=95",
-      "date": "2024-03-20"
+      "date": "2024-03-20",
+      "details": {
+        "camera": "Sony A7R V",
+        "lens": "FE 90mm f/2.8 Macro",
+        "aperture": "f/8.0",
+        "shutterSpeed": "1/160s",
+        "iso": 200
+      }
     },
     {
       "id": "product-003",
@@ -214,7 +333,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80",
       "alt": "Modern tech product photography with clean lighting",
       "downloadUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=2400&q=95",
-      "date": "2024-04-12"
+      "date": "2024-04-12",
+      "details": {
+        "camera": "Sony A7R V",
+        "lens": "FE 90mm f/2.8 Macro",
+        "aperture": "f/8.0",
+        "shutterSpeed": "1/160s",
+        "iso": 200
+      }
     },
     {
       "id": "portrait-001",
@@ -226,7 +352,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
       "alt": "Artistic portrait with dramatic lighting and composition",
       "downloadUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=2400&q=95",
-      "date": "2024-04-05"
+      "date": "2024-04-05",
+      "details": {
+        "camera": "Sony A7 IV",
+        "lens": "FE 85mm f/1.4 GM",
+        "aperture": "f/1.8",
+        "shutterSpeed": "1/250s",
+        "iso": 200
+      }
     },
     {
       "id": "portrait-002",
@@ -238,7 +371,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
       "alt": "Beautiful natural light portrait with soft lighting",
       "downloadUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=2400&q=95",
-      "date": "2024-03-28"
+      "date": "2024-03-28",
+      "details": {
+        "camera": "Sony A7 IV",
+        "lens": "FE 85mm f/1.4 GM",
+        "aperture": "f/1.8",
+        "shutterSpeed": "1/250s",
+        "iso": 400
+      }
     },
     {
       "id": "portrait-003",
@@ -250,8 +390,14 @@
       "thumbnail": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80",
       "alt": "Editorial style portrait with fashion photography aesthetic",
       "downloadUrl": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=2400&q=95",
-      "date": "2024-04-18"
+      "date": "2024-04-18",
+      "details": {
+        "camera": "Sony A7 IV",
+        "lens": "FE 85mm f/1.4 GM",
+        "aperture": "f/1.8",
+        "shutterSpeed": "1/250s",
+        "iso": 100
+      }
     }
   ]
 }
-
