@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import VideoGrid from '@/components/VideoGrid'
+import CTASection from '@/components/CTASection'
+import TestimonialsSection from '@/components/TestimonialsSection'
 import siteData from '@/data/site.json'
 import videosData from '@/data/videos.json'
 
@@ -71,6 +73,8 @@ export default function VideographyPage() {
             <VideoGrid videos={videosData.videos} />
           </section>
 
+          <TestimonialsSection />
+
           <section className="mt-16 bg-gray-50 rounded-lg p-8">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900">
               Our Videography Services
@@ -129,6 +133,7 @@ export default function VideographyPage() {
             </div>
           </section>
         </div>
+        <CTASection />
       </article>
     </>
   )

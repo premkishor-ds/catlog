@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import siteData from '@/data/site.json'
+import BenefitsSection from '@/components/BenefitsSection'
+import TestimonialsSection from '@/components/TestimonialsSection'
+import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
   title: `About ${siteData.photographer.name} | Professional Photographer & Videographer in ${siteData.photographer.location.city}`,
@@ -152,53 +155,13 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <section className="max-w-4xl mx-auto bg-primary-50 rounded-xl p-8 border border-primary-100 shadow-lg bg-pattern-waves relative">
-            <div className="absolute inset-0 bg-primary-50/90" />
-            <div className="relative z-10">
-            <h2 className="text-3xl font-semibold mb-6 text-center text-gray-900 flex items-center justify-center gap-3">
-              <div className="w-1 h-10 bg-primary-500 rounded-full" />
-              Why Work With Me?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Experience</h3>
-                <p className="text-gray-700">
-                  Over 10 years of professional photography and videography experience, 
-                  working with clients from weddings to commercial brands.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Artistic Vision</h3>
-                <p className="text-gray-700">
-                  A unique blend of documentary authenticity and artistic elegance, 
-                  creating images and videos that tell compelling stories.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Professional Quality</h3>
-                <p className="text-gray-700">
-                  State-of-the-art equipment and meticulous attention to detail ensure 
-                  every project meets the highest standards of quality.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Client-Focused</h3>
-                <p className="text-gray-700">
-                  Your vision is my priority. I work closely with clients to understand 
-                  their needs and deliver results that exceed expectations.
-                </p>
-              </div>
-            </div>
-            <div className="mt-8 text-center">
-              <a
-                href="/contact"
-                className="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 inline-block"
-              >
-                Let&apos;s Work Together
-              </a>
-            </div>
-            </div>
-          </section>
+
+
+          <BenefitsSection />
+          
+          <TestimonialsSection />
+
+          <CTASection />
         </div>
       </article>
     </>
