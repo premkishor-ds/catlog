@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import SWRegistration from '@/components/SWRegistration'
 import siteData from '@/data/site.json'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -31,6 +32,12 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Luxe Lens',
   },
   robots: {
     index: true,
@@ -138,6 +145,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Header />
+        <SWRegistration />
         <main>{children}</main>
         <Footer />
       </body>
