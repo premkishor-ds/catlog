@@ -31,7 +31,7 @@ export default function Footer() {
             
             {/* Social Media Icons */}
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-all transform hover:scale-110">
+              <a href="#" aria-label="Facebook" className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-all transform hover:scale-110">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
@@ -51,10 +51,10 @@ export default function Footer() {
           
           {/* Services Column */}
           <div>
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
+            <h3 className="text-white font-bold mb-4 flex items-center gap-2">
               <div className="w-1 h-5 bg-primary-500 rounded-full" />
               Services
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/photography/wedding" className="hover:text-primary-400 transition-colors flex items-center gap-2 group">
@@ -91,10 +91,10 @@ export default function Footer() {
           
           {/* Quick Links Column */}
           <div>
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
+            <h3 className="text-white font-bold mb-4 flex items-center gap-2">
               <div className="w-1 h-5 bg-primary-500 rounded-full" />
               Quick Links
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/" className="hover:text-primary-400 transition-colors flex items-center gap-2 group">
@@ -133,10 +133,10 @@ export default function Footer() {
           
           {/* Contact Column */}
           <div>
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
+            <h3 className="text-white font-bold mb-4 flex items-center gap-2">
               <div className="w-1 h-5 bg-primary-500 rounded-full" />
               Get In Touch
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export default function Footer() {
                 </svg>
                 <div>
                   <div className="text-gray-400">{siteData.photographer.location.address}</div>
-                  <div className="text-gray-500 text-xs mt-1">{siteData.photographer.location.city}, {siteData.photographer.location.state}</div>
+                  <div className="text-gray-400 text-xs mt-1">{siteData.photographer.location.city}, {siteData.photographer.location.state}</div>
                 </div>
               </li>
               <li className="flex items-center gap-3">
@@ -178,7 +178,7 @@ export default function Footer() {
             <p className="text-sm text-gray-400">
               &copy; {new Date().getFullYear()} <span className="text-primary-400 font-semibold">{siteData.photographer.businessName}</span>. All rights reserved.
             </p>
-            <div className="flex gap-6 text-xs text-gray-500">
+            <div className="flex gap-6 text-xs text-gray-400">
               <Link href="/about" className="hover:text-primary-400 transition-colors">Privacy Policy</Link>
               <Link href="/contact" className="hover:text-primary-400 transition-colors">Terms of Service</Link>
             </div>
