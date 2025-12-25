@@ -91,7 +91,7 @@ export default function HeroSlider({ photos }: HeroSliderProps) {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90">
                         <div className="absolute bottom-6 left-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform">
                             <p className="text-xs font-bold uppercase tracking-wider text-primary-400 mb-1">{photo.category}</p>
-                            <h3 className="text-xl font-bold">{photo.title}</h3>
+                            <p className="text-xl font-bold">{photo.title}</p>
                         </div>
                     </div>
                 </div>

@@ -62,7 +62,7 @@ export default function VideographyPortfolio() {
                   <p className="text-primary-300 text-sm font-bold uppercase tracking-wide mb-1 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                       {video.category}
                   </p>
-                  <h3 className="text-white text-xl font-bold leading-tight">{video.title}</h3>
+                  <p className="text-white text-xl font-bold leading-tight">{video.title}</p>
                   <p className="text-gray-300 text-sm mt-1 line-clamp-1 opacity-80">{video.location}</p>
                </div>
             </Link>

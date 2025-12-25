@@ -33,9 +33,11 @@ const config: Config = {
           200: '#edd5a3',
           300: '#e0b86b',
           400: '#cf9d3e',
-          500: '#b48325', // Main CTA
-          600: '#96661c',
-          700: '#785016',
+          500: '#96661c', // Main CTA (Darkened for contrast)
+          600: '#96661c', // Darkened (matches primary-600)
+          700: '#785016', // Darkened (matches primary-700)
+          800: '#5c3d0f',
+          900: '#422c0b',
         },
         text: {
           primary: '#0F172A', // Primary Text (Dark)
