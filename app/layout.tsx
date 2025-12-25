@@ -12,6 +12,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sharmavisualarts.com'),
   title: siteData.seo.defaultTitle,
   description: siteData.seo.defaultDescription,
   keywords: siteData.seo.keywords,
