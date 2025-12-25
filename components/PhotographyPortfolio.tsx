@@ -43,7 +43,7 @@ export default function PhotographyPortfolio() {
                 alt={photo.alt}
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
-                sizes="(max-width: 768px) 50vw, 25vw"
+                sizes="(max-width: 768px) 33vw, 16vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">

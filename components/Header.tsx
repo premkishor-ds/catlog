@@ -114,7 +114,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <button className="lg:hidden text-gray-700 p-2 hover:bg-primary-50 rounded-lg transition-colors">
+          <button className="lg:hidden text-gray-700 p-2 hover:bg-primary-50 rounded-lg transition-colors" aria-label="Open mobile menu">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
