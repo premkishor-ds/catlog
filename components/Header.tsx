@@ -29,21 +29,21 @@ export default function Header() {
       <div className="bg-primary-700 text-white text-xs py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <a href={`tel:${siteData.photographer.location.phone}`} className="hover:text-primary-200 transition-colors flex items-center gap-1">
+            <a href={`tel:${siteData.photographer.location.phone}`} className="hover:text-white transition-colors flex items-center gap-1">
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               {siteData.photographer.location.phone}
             </a>
-            <span className="hidden sm:inline">|</span>
-            <a href={`mailto:${siteData.photographer.location.email}`} className="hover:text-primary-200 transition-colors hidden sm:flex items-center gap-1">
+            <span className="hidden sm:inline opacity-50">|</span>
+            <a href={`mailto:${siteData.photographer.location.email}`} className="hover:text-white transition-colors hidden sm:flex items-center gap-1">
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               {siteData.photographer.location.email}
             </a>
           </div>
-          <div className="text-primary-200">
+          <div className="text-white/90">
             📍 {siteData.photographer.location.city}, {siteData.photographer.location.state}
           </div>
         </div>
@@ -72,8 +72,8 @@ export default function Header() {
               href="/" 
               className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
                 isActive('/') 
-                  ? 'text-primary-600 bg-primary-50 ring-1 ring-primary-100' 
-                  : 'text-gray-700 hover:text-primary-600 hover:bg-primary-50'
+                  ? 'text-primary-800 bg-primary-50 ring-1 ring-primary-200' 
+                  : 'text-gray-900 hover:text-primary-700 hover:bg-primary-50'
               }`}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,10 +83,10 @@ export default function Header() {
             </Link>
             <div className="relative group">
               <button 
-                className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
+                 className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
                   isActive('/photography') 
-                    ? 'text-primary-600 bg-primary-50 ring-1 ring-primary-100' 
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-primary-50'
+                    ? 'text-primary-800 bg-primary-50 ring-1 ring-primary-200' 
+                    : 'text-gray-900 hover:text-primary-700 hover:bg-primary-50'
                 }`}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,7 +103,7 @@ export default function Header() {
                     <Link
                       key={category.slug}
                       href={`/photography/${category.slug}`}
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-all flex items-center gap-3 group/item"
+                      className="block px-4 py-3 text-sm text-gray-900 hover:bg-primary-50 hover:text-primary-700 transition-all flex items-center gap-3 group/item"
                     >
                       <span className="text-lg">{category.icon}</span>
                       <span className="group-hover/item:translate-x-1 transition-transform">{category.name}</span>
@@ -116,8 +116,8 @@ export default function Header() {
               href="/videography" 
               className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
                 isActive('/videography') 
-                  ? 'text-primary-600 bg-primary-50 ring-1 ring-primary-100' 
-                  : 'text-gray-700 hover:text-primary-600 hover:bg-primary-50'
+                  ? 'text-primary-800 bg-primary-50 ring-1 ring-primary-200' 
+                  : 'text-gray-900 hover:text-primary-700 hover:bg-primary-50'
               }`}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,8 +129,8 @@ export default function Header() {
               href="/gallery" 
               className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
                 isActive('/gallery') 
-                  ? 'text-primary-600 bg-primary-50 ring-1 ring-primary-100' 
-                  : 'text-gray-700 hover:text-primary-600 hover:bg-primary-50'
+                  ? 'text-primary-800 bg-primary-50 ring-1 ring-primary-200' 
+                  : 'text-gray-900 hover:text-primary-700 hover:bg-primary-50'
               }`}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,8 +142,8 @@ export default function Header() {
               href="/about" 
               className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
                 isActive('/about') 
-                  ? 'text-primary-600 bg-primary-50 ring-1 ring-primary-100' 
-                  : 'text-gray-700 hover:text-primary-600 hover:bg-primary-50'
+                  ? 'text-primary-800 bg-primary-50 ring-1 ring-primary-200' 
+                  : 'text-gray-900 hover:text-primary-700 hover:bg-primary-50'
               }`}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
