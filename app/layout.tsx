@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     title: siteData.seo.defaultTitle,
     description: siteData.seo.defaultDescription,
   },
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/icon.svg',
+  },
   robots: {
     index: true,
     follow: true,
