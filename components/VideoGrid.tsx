@@ -34,7 +34,7 @@ export default function VideoGrid({ videos }: VideoGridProps) {
               onClose={() => setSelectedVideo(null)}
             />
             <div>
-              <h3 className="font-semibold text-lg">{video.title}</h3>
+              <p className="font-semibold text-lg">{video.title}</p>
               <p className="text-sm text-gray-600">{video.location}</p>
             </div>
           </div>

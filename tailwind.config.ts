@@ -20,10 +20,10 @@ const config: Config = {
           300: '#d9c482',
           400: '#ccb058',
           500: '#d4af37',     // Classic Gold
-          600: '#aa8c2c',
-          700: '#887023',
-          800: '#715d26',
-          900: '#604e25',
+          600: '#96661c',     // Darkened for contrast (passes AA with white)
+          700: '#785016',     // Darker Bronze
+          800: '#5c3d0f',     // Deep Bronze
+          900: '#422c0b',     // Very Deep Bronze
           950: '#352910',
         },
         cta: {

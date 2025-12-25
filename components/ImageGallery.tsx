@@ -57,7 +57,7 @@ export default function ImageGallery({ photos, columns = 3 }: ImageGalleryProps)
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center px-4">
-                <h3 className="font-semibold text-lg mb-1">{photo.title}</h3>
+                <p className="font-semibold text-lg mb-1">{photo.title}</p>
                 <p className="text-sm">{photo.location}</p>
               </div>
             </div>

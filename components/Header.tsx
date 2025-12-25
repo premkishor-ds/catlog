@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-lg border-b-2 border-primary-200">
       {/* Top Bar */}
-      <div className="bg-primary-700 text-white text-xs py-2">
+      <div className="bg-gray-900 text-white text-xs py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-4">
             <a href={`tel:${siteData.photographer.location.phone}`} className="hover:text-white transition-colors flex items-center gap-1">
