@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
-import siteData from '@/data/site.json'
+
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
