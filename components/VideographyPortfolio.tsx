@@ -1,9 +1,13 @@
-import React from 'react'
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import videosData from '@/data/videos.json'
+import VideoPlayer from './VideoPlayer'
 
 export default function VideographyPortfolio() {
+  const [selectedVideo, setSelectedVideo] = useState<typeof videosData.videos[0] | null>(null)
   return (
     <section className="bg-primary-50 py-24">
       <div className="container mx-auto px-4 mb-12">
@@ -35,10 +39,10 @@ export default function VideographyPortfolio() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
           {/* Show 16 videos for 4x4 grid */}
           {[...videosData.videos, ...videosData.videos, ...videosData.videos].slice(0, 16).map((video, index) => (
-            <Link
+            <div
                key={`${video.id}-${index}`}
-               href="/videography"
-               className="group relative block overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 aspect-video"
+               onClick={() => setSelectedVideo(video)}
+               className="group relative block overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 aspect-video cursor-pointer"
             >
                <Image
                   src={video.thumbnail}
@@ -65,10 +69,43 @@ export default function VideographyPortfolio() {
                   <p className="text-white text-xl font-bold leading-tight">{video.title}</p>
                   <p className="text-gray-300 text-sm mt-1 line-clamp-1 opacity-80">{video.location}</p>
                </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
+
+      {selectedVideo && (
+        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4" onClick={() => setSelectedVideo(null)}>
+          <div className="max-w-6xl w-full" onClick={e => e.stopPropagation()}>
+             <div className="relative">
+                <VideoPlayer
+                  video={selectedVideo}
+                  onClose={() => setSelectedVideo(null)}
+                />
+             </div>
+             <div className="mt-6 text-white text-center">
+                <h2 className="text-2xl font-bold mb-2">{selectedVideo.title}</h2>
+                <p className="text-gray-300 max-w-2xl mx-auto mb-4">{selectedVideo.description}</p>
+                <div className="flex justify-center gap-6 text-sm text-gray-400 mb-6">
+                   <span>📍 {selectedVideo.location}</span>
+                   <span>📅 {new Date(selectedVideo.date).toLocaleDateString()}</span>
+                   <span>⏱️ {selectedVideo.duration}</span>
+                </div>
+                <a 
+                   href={selectedVideo.downloadUrl} 
+                   download={`${selectedVideo.title.replace(/\s+/g, '-')}.mp4`}
+                   className="inline-flex items-center gap-2 bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition-colors font-semibold"
+                   onClick={(e) => e.stopPropagation()}
+                >
+                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                   </svg>
+                   Download Video
+                </a>
+             </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

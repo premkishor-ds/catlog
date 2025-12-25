@@ -1,9 +1,13 @@
-import React from 'react'
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import photosData from '@/data/photos.json'
+import Lightbox from './Lightbox'
 
 export default function PhotographyPortfolio() {
+  const [selectedPhoto, setSelectedPhoto] = useState<typeof photosData.photos[0] | null>(null)
   return (
     <section className="bg-bg-section py-24 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-white to-transparent" />
@@ -33,10 +37,10 @@ export default function PhotographyPortfolio() {
         <div className="grid grid-cols-3 md:grid-cols-6 gap-1">
           {/* Repeat photos to ensure we fill the 6x4 grid (24 items) if needed */}
           {[...photosData.photos, ...photosData.photos].slice(0, 24).map((photo, index) => (
-            <Link
+            <div
               key={`${photo.id}-${index}`}
-              href="/gallery"
-              className={`relative group overflow-hidden block aspect-square`}
+              onClick={() => setSelectedPhoto(photo)}
+              className="relative group overflow-hidden block aspect-square cursor-pointer"
             >
               <Image
                 src={photo.thumbnail}
@@ -51,10 +55,17 @@ export default function PhotographyPortfolio() {
                   <p className="text-sm text-white/80 capitalize">{photo.category}</p>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
+
+      {selectedPhoto && (
+        <Lightbox
+          photo={selectedPhoto}
+          onClose={() => setSelectedPhoto(null)}
+        />
+      )}
     </section>
   )
 }

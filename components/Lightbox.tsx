@@ -1,7 +1,6 @@
-'use client'
-
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { createPortal } from 'react-dom'
 
 interface Photo {
   id: string
@@ -29,7 +28,10 @@ interface LightboxProps {
 }
 
 export default function Lightbox({ photo, onClose }: LightboxProps) {
+  const [mounted, setMounted] = useState(false)
+
   useEffect(() => {
+    setMounted(true)
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         onClose()
@@ -51,21 +53,13 @@ export default function Lightbox({ photo, onClose }: LightboxProps) {
     link.click()
   }
 
-  return (
+  if (!mounted) return null
+
+  return createPortal(
     <div
-      className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+      className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-4"
       onClick={onClose}
     >
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
-        aria-label="Close lightbox"
-      >
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      
       <div
         className="relative max-w-7xl w-full h-full flex flex-col items-center justify-center"
         onClick={(e) => e.stopPropagation()}
@@ -75,10 +69,21 @@ export default function Lightbox({ photo, onClose }: LightboxProps) {
             src={photo.url}
             alt={photo.alt}
             fill
-            className="object-contain"
+            className="object-contain transition-opacity duration-300"
             sizes="100vw"
             priority
+            onLoadingComplete={(img) => img.classList.remove('opacity-0')}
           />
+          {/* Low-res placeholder / Blur effect */}
+          <div className="absolute inset-0 -z-10">
+             <Image
+                src={photo.thumbnail}
+                alt={photo.alt}
+                fill
+                className="object-contain blur-xl"
+                sizes="100vw"
+             />
+          </div>
         </div>
         
         <div className="mt-4 text-white text-center max-w-2xl">
@@ -135,7 +140,18 @@ export default function Lightbox({ photo, onClose }: LightboxProps) {
           </button>
         </div>
       </div>
-    </div>
+
+      <button
+        onClick={onClose}
+        className="fixed top-6 right-6 z-[9999] text-white bg-black/50 hover:bg-primary-600 rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-xl border border-white/20 group"
+        aria-label="Close lightbox"
+      >
+        <svg className="w-8 h-8 group-hover:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>,
+    document.body
   )
 }
 
