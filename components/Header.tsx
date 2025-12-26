@@ -89,7 +89,8 @@ export default function Header() {
               Home
             </Link>
             <div className="relative group">
-              <button 
+              <Link 
+                 href="/photography"
                  className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 ${
                   isActive('/photography') 
                     ? 'text-primary-800 bg-primary-50 ring-1 ring-primary-200' 
@@ -103,7 +104,7 @@ export default function Header() {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
               <div className="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border-2 border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="py-2">
                   {categories.map((category) => (
