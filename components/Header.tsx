@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -23,6 +24,8 @@ export default function Header() {
     if (path !== '/' && pathname?.startsWith(path)) return true
     return false
   }
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-lg border-b-2 border-primary-200">
@@ -53,7 +56,7 @@ export default function Header() {
       {/* Main Navigation */}
       <nav className="container mx-auto px-4 py-4" aria-label="Main navigation">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsMobileMenuOpen(false)}>
             <div className="w-12 h-12 relative flex items-center justify-center transform group-hover:rotate-6 transition-transform">
               <Image 
                 src="/logo.png" 
@@ -170,12 +173,105 @@ export default function Header() {
             </Link>
           </div>
 
-          <button className="lg:hidden text-gray-700 p-2 hover:bg-primary-50 rounded-lg transition-colors" aria-label="Open mobile menu">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button 
+            className="lg:hidden text-gray-700 p-2 hover:bg-primary-50 rounded-lg transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden mt-4 pb-4 space-y-2 border-t border-gray-100 pt-4 animate-zoom-in">
+            <Link 
+              href="/" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block px-4 py-3 rounded-lg font-medium transition-all ${
+                isActive('/') 
+                  ? 'bg-primary-50 text-primary-800' 
+                  : 'text-gray-700 hover:bg-gray-50'
+              }`}
+            >
+              Home
+            </Link>
+            
+            <Link 
+               href="/photography"
+               onClick={() => setIsMobileMenuOpen(false)}
+               className={`block px-4 py-3 rounded-lg font-medium transition-all ${
+                isActive('/photography') 
+                  ? 'bg-primary-50 text-primary-800' 
+                  : 'text-gray-700 hover:bg-gray-50'
+               }`}
+            >
+               Photography
+            </Link>
+            
+            <div className="pl-6 space-y-1">
+               {categories.map((category) => (
+                  <Link
+                     key={category.slug}
+                     href={`/photography/${category.slug}`}
+                     onClick={() => setIsMobileMenuOpen(false)}
+                     className="block px-4 py-2 text-sm text-gray-600 hover:text-primary-600 transition-colors"
+                  >
+                     {category.icon} {category.name}
+                  </Link>
+               ))}
+            </div>
+
+            <Link 
+              href="/videography" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block px-4 py-3 rounded-lg font-medium transition-all ${
+                isActive('/videography') 
+                  ? 'bg-primary-50 text-primary-800' 
+                  : 'text-gray-700 hover:bg-gray-50'
+              }`}
+            >
+              Videography
+            </Link>
+            <Link 
+              href="/gallery" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block px-4 py-3 rounded-lg font-medium transition-all ${
+                isActive('/gallery') 
+                  ? 'bg-primary-50 text-primary-800' 
+                  : 'text-gray-700 hover:bg-gray-50'
+              }`}
+            >
+              Gallery
+            </Link>
+            <Link 
+              href="/about" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block px-4 py-3 rounded-lg font-medium transition-all ${
+                isActive('/about') 
+                  ? 'bg-primary-50 text-primary-800' 
+                  : 'text-gray-700 hover:bg-gray-50'
+              }`}
+            >
+              About
+            </Link>
+            <Link 
+              href="/contact" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block px-4 py-3 mt-4 text-center bg-cta-500 text-white rounded-lg font-bold hover:bg-cta-600 transition-colors shadow-md"
+            >
+              Book Your Shoot
+            </Link>
+          </div>
+        )}
       </nav>
     </header>
   )

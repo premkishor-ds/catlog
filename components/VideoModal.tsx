@@ -10,8 +10,8 @@ interface Video {
   category: string
   location: string
   thumbnail: string
-  url: string
-  videoUrl?: string
+  videoUrl: string
+  url?: string
   alt: string
   duration: string
   date: string

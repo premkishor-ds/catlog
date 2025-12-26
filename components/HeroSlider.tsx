@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -42,6 +42,18 @@ export default function HeroSlider({ photos }: HeroSliderProps) {
   // We need to handle the initial render carefully.
   const [idx, setIdx] = useState(3)
 
+  const handleNext = useCallback(() => {
+    if (isTransitioning) return
+    setIsTransitioning(true)
+    setIdx((prev) => prev + 1)
+  }, [isTransitioning])
+
+  const handlePrev = useCallback(() => {
+    if (isTransitioning) return
+    setIsTransitioning(true)
+    setIdx((prev) => prev - 1)
+  }, [isTransitioning])
+
   useEffect(() => {
     if (!isAutoPlaying) return
 
@@ -50,19 +62,7 @@ export default function HeroSlider({ photos }: HeroSliderProps) {
     }, 4000)
 
     return () => clearInterval(interval)
-  }, [isAutoPlaying])
-
-  const handleNext = () => {
-    if (isTransitioning) return
-    setIsTransitioning(true)
-    setIdx((prev) => prev + 1)
-  }
-
-  const handlePrev = () => {
-    if (isTransitioning) return
-    setIsTransitioning(true)
-    setIdx((prev) => prev - 1)
-  }
+  }, [isAutoPlaying, handleNext])
 
   const onTransitionEnd = () => {
     setIsTransitioning(false)

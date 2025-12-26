@@ -37,6 +37,8 @@ export default function ImageGallery({ photos, columns = 3 }: ImageGalleryProps)
     ? 'lg:grid-cols-2' 
     : columns === 4 
     ? 'lg:grid-cols-4' 
+    : columns === 5
+    ? 'lg:grid-cols-5'
     : 'lg:grid-cols-3'
 
   return (

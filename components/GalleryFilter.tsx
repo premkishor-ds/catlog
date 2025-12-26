@@ -163,7 +163,7 @@ export default function GalleryFilter() {
       <section>
         {displayedPhotos.length > 0 ? (
           <>
-            <ImageGallery photos={displayedPhotos} columns={3} />
+            <ImageGallery photos={displayedPhotos} columns={5} />
             
             {/* Load More Button / Infinite Scroll Indicator */}
             {hasMore && (
