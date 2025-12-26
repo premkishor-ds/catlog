@@ -65,8 +65,11 @@ npm start
 │   └── ContactForm.tsx
 └── data/                  # JSON data files
     ├── site.json          # Site configuration
-    ├── photos.json        # Photo data
-    └── videos.json        # Video data
+    ├── photos.json        # Full photo gallery data
+    ├── videos.json        # Full video portfolio data
+    ├── slider_photos.json # Homepage hero slider data
+    ├── home_photos.json   # Homepage portfolio section data
+    └── home_videos.json   # Homepage video section data
 ```
 
 ## Pages
@@ -103,8 +106,11 @@ npm start
 Data is managed via JSON files in the `/data` directory:
 
 - `site.json` - Site configuration, photographer info, location
-- `photos.json` - Photo gallery data
-- `videos.json` - Video portfolio data
+- `photos.json` - Complete photo gallery data (for Gallery page)
+- `videos.json` - Complete video portfolio data (for Videography page)
+- `slider_photos.json` - Curated images for the Homepage Hero Slider
+- `home_photos.json` - Curated images for the Homepage Photography section
+- `home_videos.json` - Curated videos for the Homepage Videography section
 
 These can be easily replaced with CMS or API integration in the future.
 
