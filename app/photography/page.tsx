@@ -33,7 +33,7 @@ const categories = [
     name: 'Party & Events', 
     slug: 'party', 
     icon: '🎉', 
-    description: 'Celebrating life\'s memorable moments with vibrant, energetic event photography.'
+    description: 'Celebrating life&apos;s memorable moments with vibrant, energetic event photography.'
   },
   { 
     name: 'Indoor Photography', 
@@ -113,7 +113,7 @@ export default function PhotographyPage() {
              <div className="relative z-10 max-w-2xl mx-auto">
                <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Book Your Session?</h2>
                <p className="text-primary-100 text-lg mb-8">
-                 Whether it's a wedding, a corporate event, or a personal portrait, we're here to create beautiful visual memories for you.
+                 Whether it&apos;s a wedding, a corporate event, or a personal portrait, we&apos;re here to create beautiful visual memories for you.
                </p>
                <Link
                  href="/contact"
