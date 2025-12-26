@@ -30,10 +30,7 @@ export const metadata: Metadata = {
     description: siteData.seo.defaultDescription,
   },
   manifest: '/manifest.json',
-  icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
-  },
+
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
