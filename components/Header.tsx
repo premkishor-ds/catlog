@@ -191,85 +191,127 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 space-y-2 border-t border-gray-100 pt-4 animate-zoom-in">
-            <Link 
-              href="/" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`block px-4 py-3 rounded-lg font-medium transition-all ${
-                isActive('/') 
-                  ? 'bg-primary-50 text-primary-800' 
-                  : 'text-gray-700 hover:bg-gray-50'
-              }`}
-            >
-              Home
-            </Link>
-            
-            <Link 
-               href="/photography"
-               onClick={() => setIsMobileMenuOpen(false)}
-               className={`block px-4 py-3 rounded-lg font-medium transition-all ${
-                isActive('/photography') 
-                  ? 'bg-primary-50 text-primary-800' 
-                  : 'text-gray-700 hover:bg-gray-50'
-               }`}
-            >
-               Photography
-            </Link>
-            
-            <div className="pl-6 space-y-1">
-               {categories.map((category) => (
-                  <Link
-                     key={category.slug}
-                     href={`/photography/${category.slug}`}
-                     onClick={() => setIsMobileMenuOpen(false)}
-                     className="block px-4 py-2 text-sm text-gray-600 hover:text-primary-600 transition-colors"
-                  >
-                     {category.icon} {category.name}
-                  </Link>
-               ))}
-            </div>
 
-            <Link 
-              href="/videography" 
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 z-[100] lg:hidden">
+            {/* Backdrop */}
+            <div 
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-fade-in"
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`block px-4 py-3 rounded-lg font-medium transition-all ${
-                isActive('/videography') 
-                  ? 'bg-primary-50 text-primary-800' 
-                  : 'text-gray-700 hover:bg-gray-50'
-              }`}
-            >
-              Videography
-            </Link>
-            <Link 
-              href="/gallery" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`block px-4 py-3 rounded-lg font-medium transition-all ${
-                isActive('/gallery') 
-                  ? 'bg-primary-50 text-primary-800' 
-                  : 'text-gray-700 hover:bg-gray-50'
-              }`}
-            >
-              Gallery
-            </Link>
-            <Link 
-              href="/about" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`block px-4 py-3 rounded-lg font-medium transition-all ${
-                isActive('/about') 
-                  ? 'bg-primary-50 text-primary-800' 
-                  : 'text-gray-700 hover:bg-gray-50'
-              }`}
-            >
-              About
-            </Link>
-            <Link 
-              href="/contact" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-3 mt-4 text-center bg-cta-500 text-white rounded-lg font-bold hover:bg-cta-600 transition-colors shadow-md"
-            >
-              Book Your Shoot
-            </Link>
+            />
+            
+            {/* Menu Content */}
+            <div className="absolute right-0 top-0 bottom-0 w-[80%] max-w-sm bg-white shadow-2xl animate-slide-in-right overflow-y-auto">
+              <div className="p-6 flex flex-col h-full">
+                <div className="flex justify-between items-center mb-8">
+                  <div className="w-10 h-10 relative">
+                    <Image 
+                      src="/logo.png" 
+                      alt="Logo" 
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <button 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-2 text-gray-500 hover:text-gray-900 transition-colors rounded-full hover:bg-gray-100"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div className="space-y-2 flex-grow">
+                  <Link 
+                    href="/" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block px-4 py-3 rounded-xl font-medium transition-all text-lg ${
+                      isActive('/') 
+                        ? 'bg-primary-50 text-primary-900' 
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    }`}
+                  >
+                    Home
+                  </Link>
+                  
+                  <div className="py-2">
+                    <Link
+                      href="/photography"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-xl font-medium transition-all text-lg mb-2 ${
+                        isActive('/photography')
+                          ? 'bg-primary-50 text-primary-900'
+                          : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                      }`}
+                    >
+                      Photography
+                    </Link>
+                    <div className="pl-4 border-l-2 border-gray-100 ml-4 space-y-1">
+                      {categories.map((category) => (
+                        <Link
+                          key={category.slug}
+                          href={`/photography/${category.slug}`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block px-4 py-2 text-sm text-gray-500 hover:text-primary-600 transition-colors flex items-center gap-2"
+                        >
+                          <span>{category.icon}</span>
+                          {category.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  <Link 
+                    href="/videography" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block px-4 py-3 rounded-xl font-medium transition-all text-lg ${
+                      isActive('/videography') 
+                        ? 'bg-primary-50 text-primary-900' 
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    }`}
+                  >
+                    Videography
+                  </Link>
+                  <Link 
+                    href="/gallery" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block px-4 py-3 rounded-xl font-medium transition-all text-lg ${
+                      isActive('/gallery') 
+                        ? 'bg-primary-50 text-primary-900' 
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    }`}
+                  >
+                    Gallery
+                  </Link>
+                  <Link 
+                    href="/about" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block px-4 py-3 rounded-xl font-medium transition-all text-lg ${
+                      isActive('/about') 
+                        ? 'bg-primary-50 text-primary-900' 
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    }`}
+                  >
+                    About
+                  </Link>
+                </div>
+
+                <div className="pt-8 border-t border-gray-100 mt-4">
+                  <Link 
+                    href="/contact" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full py-4 text-center bg-cta-600 text-white rounded-xl font-bold hover:bg-cta-700 transition-all shadow-lg active:scale-95"
+                  >
+                    Book Your Shoot
+                  </Link>
+                  <div className="mt-6 text-center text-sm text-gray-400">
+                    <p>© {new Date().getFullYear()} {siteData.photographer.businessName}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </nav>

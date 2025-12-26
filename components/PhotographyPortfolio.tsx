@@ -10,12 +10,12 @@ import Skeleton from './Skeleton'
 export default function PhotographyPortfolio() {
   const [selectedPhoto, setSelectedPhoto] = useState<typeof photosData.photos[0] | null>(null)
   return (
-    <section className="bg-bg-section py-24 relative overflow-hidden">
+    <section className="bg-bg-section py-16 md:py-24 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-white to-transparent" />
-      <div className="container mx-auto px-4 relative mb-12">
+      <div className="container mx-auto px-4 relative mb-8 md:mb-12">
         <div className="flex flex-col md:flex-row justify-between items-end gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6">
               Photography Portfolio
             </h2>
             <p className="text-lg text-text-secondary leading-relaxed">
@@ -35,7 +35,7 @@ export default function PhotographyPortfolio() {
       </div>
         
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-1">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-1">
           {/* Repeat photos to ensure we fill the 6x4 grid (24 items) if needed */}
           {[...photosData.photos, ...photosData.photos].slice(0, 24).map((photo, index) => (
             <PhotoItem 

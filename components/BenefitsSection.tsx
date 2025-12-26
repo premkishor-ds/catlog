@@ -60,9 +60,9 @@ const benefits = [
 
 export default function BenefitsSection() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
             Why Choose Us?
           </h2>

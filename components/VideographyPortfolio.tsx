@@ -10,14 +10,14 @@ import Skeleton from './Skeleton'
 export default function VideographyPortfolio() {
   const [selectedVideo, setSelectedVideo] = useState<typeof videosData.videos[0] | null>(null)
   return (
-    <section className="bg-primary-50 py-24">
-      <div className="container mx-auto px-4 mb-12">
+    <section className="bg-primary-50 py-16 md:py-24">
+      <div className="container mx-auto px-4 mb-8 md:mb-12">
         <div className="flex flex-col md:flex-row justify-between items-end gap-6">
           <div className="max-w-2xl">
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-semibold mb-4 tracking-wide uppercase">
               Cinematic Films
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4 md:mb-6">
               Motion & Emotion
             </h2>
             <p className="text-lg text-text-secondary leading-relaxed">
@@ -37,7 +37,7 @@ export default function VideographyPortfolio() {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-1">
           {/* Show 16 videos for 4x4 grid */}
           {/* Show 16 videos for 4x4 grid */}
           {[...videosData.videos, ...videosData.videos, ...videosData.videos].slice(0, 16).map((video, index) => (
