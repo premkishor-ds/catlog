@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import videosData from '@/data/home_videos.json'
-import VideoPlayer from './VideoPlayer'
+import VideoModal from './VideoModal'
 import Skeleton from './Skeleton'
 
 export default function VideographyPortfolio() {
@@ -51,36 +51,10 @@ export default function VideographyPortfolio() {
       </div>
 
       {selectedVideo && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4" onClick={() => setSelectedVideo(null)}>
-          <div className="max-w-6xl w-full" onClick={e => e.stopPropagation()}>
-             <div className="relative">
-                <VideoPlayer
-                  video={selectedVideo}
-                  onClose={() => setSelectedVideo(null)}
-                />
-             </div>
-             <div className="mt-6 text-white text-center">
-                <h2 className="text-2xl font-bold mb-2">{selectedVideo.title}</h2>
-                <p className="text-gray-300 max-w-2xl mx-auto mb-4">{selectedVideo.description}</p>
-                <div className="flex justify-center gap-6 text-sm text-gray-400 mb-6">
-                   <span>📍 {selectedVideo.location}</span>
-                   <span>📅 {new Date(selectedVideo.date).toLocaleDateString()}</span>
-                   <span>⏱️ {selectedVideo.duration}</span>
-                </div>
-                <a 
-                   href={selectedVideo.downloadUrl} 
-                   download={`${selectedVideo.title.replace(/\s+/g, '-')}.mp4`}
-                   className="inline-flex items-center gap-2 bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition-colors font-semibold"
-                   onClick={(e) => e.stopPropagation()}
-                >
-                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                   </svg>
-                   Download Video
-                </a>
-             </div>
-          </div>
-        </div>
+        <VideoModal 
+            video={selectedVideo} 
+            onClose={() => setSelectedVideo(null)} 
+        />
       )}
     </section>
   )

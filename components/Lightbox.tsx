@@ -30,12 +30,13 @@ interface LightboxProps {
 
 export default function Lightbox({ photo, onClose }: LightboxProps) {
   const [mounted, setMounted] = useState(false)
+  const [isClosing, setIsClosing] = useState(false)
 
   useEffect(() => {
     setMounted(true)
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        onClose()
+        handleClose()
       }
     }
     document.addEventListener('keydown', handleEscape)
@@ -45,7 +46,15 @@ export default function Lightbox({ photo, onClose }: LightboxProps) {
       document.removeEventListener('keydown', handleEscape)
       document.body.style.overflow = 'unset'
     }
-  }, [onClose])
+  }, [onClose]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handleClose = () => {
+    setIsClosing(true)
+    setTimeout(() => {
+      onClose()
+      setIsClosing(false)
+    }, 300) // Match animation duration
+  }
 
   const handleDownload = () => {
     const link = document.createElement('a')
@@ -58,8 +67,8 @@ export default function Lightbox({ photo, onClose }: LightboxProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-4"
-      onClick={onClose}
+      className={`fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-4 ${isClosing ? 'animate-zoom-out' : 'animate-zoom-in'}`}
+      onClick={handleClose}
     >
       <div
         className="relative max-w-7xl w-full h-full flex flex-col items-center justify-center"
@@ -146,7 +155,7 @@ export default function Lightbox({ photo, onClose }: LightboxProps) {
       </div>
 
       <button
-        onClick={onClose}
+        onClick={handleClose}
         className="fixed top-6 right-6 z-[9999] text-white bg-black/50 hover:bg-primary-600 rounded-full p-3 backdrop-blur-md transition-all duration-300 shadow-xl border border-white/20 group"
         aria-label="Close lightbox"
       >
