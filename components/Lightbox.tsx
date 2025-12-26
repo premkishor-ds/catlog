@@ -19,6 +19,7 @@ interface Photo {
     aperture: string
     shutterSpeed: string
     iso: number
+    time?: string
   }
 }
 
@@ -89,7 +90,10 @@ export default function Lightbox({ photo, onClose }: LightboxProps) {
         <div className="mt-4 text-white text-center max-w-2xl">
           <h2 className="text-2xl font-bold mb-2">{photo.title}</h2>
           <p className="text-gray-300 mb-1">{photo.description}</p>
-          <p className="text-sm text-gray-400 mb-4">{photo.location} • {new Date(photo.date).toLocaleDateString()}</p>
+          <p className="text-sm text-gray-400 mb-4">
+            {photo.location} • {new Date(photo.date).toLocaleDateString()}
+            {photo.details?.time && ` • ${photo.details.time}`}
+          </p>
           
           {photo.details && (
             <div className="grid grid-cols-5 gap-4 mb-6 text-sm">
