@@ -92,26 +92,26 @@ export default function HeroSlider({ photos }: HeroSliderProps) {
   // We translate by - (idx * 100%) on mobile, - (idx * 33.333%) on desktop.
   
   return (
-    <section className="relative bg-white pt-20 pb-12 overflow-hidden">
+    <section className="relative bg-white pt-20 pb-8 md:pb-12 overflow-hidden">
         {/* Main Header Overlay - code unchanged... */}
-      <div className="container mx-auto px-4 mb-10 text-center relative z-10">
-         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+      <div className="container mx-auto px-4 mb-6 md:mb-10 text-center relative z-10">
+         <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-2 md:mb-4 tracking-tight">
             Capturing Life&apos;s <span className="text-primary-600">Moments</span>
          </h1>
-         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Professional photography & videography services for your most important days.
          </p>
-         <div className="mt-8">
+         <div className="mt-6 md:mt-8">
             <Link
                 href="/contact"
-                className="bg-primary-600 text-white px-8 py-3 rounded-full font-bold hover:bg-primary-700 transition-all transform hover:-translate-y-1 inline-block shadow-lg hover:shadow-primary-500/30"
+                className="bg-primary-600 text-white px-6 py-2 md:px-8 md:py-3 rounded-full font-bold hover:bg-primary-700 transition-all transform hover:-translate-y-1 inline-block shadow-lg hover:shadow-primary-500/30 text-sm md:text-base"
             >
                 Book Your Shoot
             </Link>
          </div>
       </div>
 
-      <div className="relative h-[400px] md:h-[500px] w-full group overflow-hidden">
+      <div className="relative h-[300px] md:h-[500px] w-full group overflow-hidden">
         <style>{`
           .slider-track {
             --slide-width: 100%;
