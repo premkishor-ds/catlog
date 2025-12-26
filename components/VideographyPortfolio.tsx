@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import videosData from '@/data/videos.json'
+import videosData from '@/data/home_videos.json'
 import VideoPlayer from './VideoPlayer'
 
 export default function VideographyPortfolio() {

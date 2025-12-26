@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import photosData from '@/data/photos.json'
+import photosData from '@/data/home_photos.json'
 import Lightbox from './Lightbox'
 
 export default function PhotographyPortfolio() {
