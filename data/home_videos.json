@@ -1,6 +1,32 @@
 {
   "videos": [
     {
+      "id": "video-006",
+      "title": "Portrait Session BTS",
+      "description": "Behind-the-scenes portrait session with artistic direction",
+      "category": "portrait",
+      "location": "Mumbai, Maharashtra",
+      "thumbnail": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+      "duration": "6:10",
+      "alt": "Portrait session behind-the-scenes video thumbnail",
+      "downloadUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+      "date": "2024-04-05"
+    },
+    {
+      "id": "video-005",
+      "title": "Product Showcase",
+      "description": "Professional product showcase video with stunning visuals",
+      "category": "product",
+      "location": "Mumbai, Maharashtra",
+      "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "duration": "2:30",
+      "alt": "Product showcase video thumbnail",
+      "downloadUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "date": "2024-04-08"
+    },
+    {
       "id": "video-001",
       "title": "Wedding Cinematic Film",
       "description": "Beautiful cinematic wedding film capturing the essence of love and celebration",
@@ -25,32 +51,6 @@
       "alt": "Travel documentary video thumbnail",
       "downloadUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       "date": "2024-04-05"
-    },
-    {
-      "id": "video-003",
-      "title": "Sports Highlights Reel",
-      "description": "Dynamic sports highlights showcasing athletic excellence",
-      "category": "sports",
-      "location": "Mumbai, Maharashtra",
-      "thumbnail": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80",
-      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-      "duration": "3:45",
-      "alt": "Sports highlights video thumbnail",
-      "downloadUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-      "date": "2024-03-30"
-    },
-    {
-      "id": "video-004",
-      "title": "Event Coverage",
-      "description": "Comprehensive event coverage with cinematic storytelling",
-      "category": "party",
-      "location": "Mumbai, Maharashtra",
-      "thumbnail": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80",
-      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-      "duration": "4:20",
-      "alt": "Event coverage video thumbnail",
-      "downloadUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-      "date": "2024-04-10"
     }
   ]
 }

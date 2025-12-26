@@ -1,26 +1,6 @@
 {
   "photos": [
     {
-      "id": "wedding-001",
-      "title": "Romantic Sunset Wedding",
-      "description": "Beautiful outdoor wedding ceremony at sunset",
-      "category": "wedding",
-      "location": "Udaipur, Rajasthan",
-      "url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80",
-      "thumbnail": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80",
-      "alt": "Romantic sunset wedding ceremony in Napa Valley with bride and groom",
-      "downloadUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?w=2400&q=95",
-      "date": "2024-03-15",
-      "details": {
-        "camera": "Sony A7 IV",
-        "lens": "FE 85mm f/1.4 GM",
-        "aperture": "f/1.8",
-        "shutterSpeed": "1/250s",
-        "iso": 200,
-        "time": "5:30 PM"
-      }
-    },
-    {
       "id": "wedding-002",
       "title": "Elegant Indoor Reception",
       "description": "Stunning indoor wedding reception with elegant decor",
@@ -58,26 +38,6 @@
         "shutterSpeed": "1/250s",
         "iso": 200,
         "time": "11:00 AM"
-      }
-    },
-    {
-      "id": "travel-001",
-      "title": "Mountain Landscape",
-      "description": "Breathtaking mountain landscape at sunrise",
-      "category": "travel",
-      "location": "Himachal Pradesh, India",
-      "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80",
-      "alt": "Stunning mountain landscape in Swiss Alps at sunrise",
-      "downloadUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2400&q=95",
-      "date": "2024-04-05",
-      "details": {
-        "camera": "Sony A7 III",
-        "lens": "FE 35mm f/1.4 GM",
-        "aperture": "f/2.8",
-        "shutterSpeed": "1/60s",
-        "iso": 1600,
-        "time": "6:15 AM"
       }
     },
     {
@@ -141,23 +101,23 @@
       }
     },
     {
-      "id": "sports-002",
-      "title": "Soccer Match",
-      "description": "Professional soccer match action photography",
+      "id": "sports-003",
+      "title": "Tennis Serve",
+      "description": "Professional tennis player serving",
       "category": "sports",
-      "location": "Mumbai, Maharashtra",
-      "url": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80",
-      "thumbnail": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&q=80",
-      "alt": "Professional soccer player in action during match",
-      "downloadUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=2400&q=95",
-      "date": "2024-03-18",
+      "location": "Delhi, India",
+      "url": "https://images.unsplash.com/photo-1534158914592-062992fbe900?w=1200&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1534158914592-062992fbe900?w=400&q=80",
+      "alt": "Professional tennis player serving the ball",
+      "downloadUrl": "https://images.unsplash.com/photo-1534158914592-062992fbe900?w=2400&q=95",
+      "date": "2024-02-28",
       "details": {
         "camera": "Sony A9 II",
         "lens": "FE 70-200mm f/2.8 GM",
         "aperture": "f/2.8",
         "shutterSpeed": "1/2000s",
-        "iso": 200,
-        "time": "4:00 PM"
+        "iso": 800,
+        "time": "4:05 PM"
       }
     },
     {
@@ -221,6 +181,26 @@
       }
     },
     {
+      "id": "indoor-002",
+      "title": "Family Portrait",
+      "description": "Warm family portrait session",
+      "category": "indoor",
+      "location": "Mumbai, Maharashtra",
+      "url": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&q=80",
+      "alt": "Warm family portrait in indoor studio setting",
+      "downloadUrl": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=2400&q=95",
+      "date": "2024-03-12",
+      "details": {
+        "camera": "Sony A7R V",
+        "lens": "FE 90mm f/2.8 Macro",
+        "aperture": "f/8.0",
+        "shutterSpeed": "1/160s",
+        "iso": 100,
+        "time": "3:06 PM"
+      }
+    },
+    {
       "id": "product-001",
       "title": "Luxury Watch",
       "description": "Professional product photography of luxury watch",
@@ -238,6 +218,26 @@
         "shutterSpeed": "1/160s",
         "iso": 100,
         "time": "4:20 PM"
+      }
+    },
+    {
+      "id": "portrait-002",
+      "title": "Natural Light Portrait",
+      "description": "Beautiful natural light portrait session",
+      "category": "portrait",
+      "location": "Mumbai, Maharashtra",
+      "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=80",
+      "thumbnail": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+      "alt": "Beautiful natural light portrait with soft lighting",
+      "downloadUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=2400&q=95",
+      "date": "2024-03-28",
+      "details": {
+        "camera": "Sony A7 IV",
+        "lens": "FE 85mm f/1.4 GM",
+        "aperture": "f/1.8",
+        "shutterSpeed": "1/250s",
+        "iso": 400,
+        "time": "5:00 PM"
       }
     }
   ]
