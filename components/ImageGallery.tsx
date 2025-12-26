@@ -90,14 +90,5 @@ function GalleryItem({ photo, onClick }: { photo: Photo, onClick: () => void }) 
     </div>
   )
 }
-      
-      {selectedPhoto && (
-        <Lightbox
-          photo={selectedPhoto}
-          onClose={() => setSelectedPhoto(null)}
-        />
-      )}
-    </>
-  )
-}
+
 
