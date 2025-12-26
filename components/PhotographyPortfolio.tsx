@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import photosData from '@/data/home_photos.json'
 import Lightbox from './Lightbox'
+import Skeleton from './Skeleton'
 
 export default function PhotographyPortfolio() {
   const [selectedPhoto, setSelectedPhoto] = useState<typeof photosData.photos[0] | null>(null)
@@ -37,25 +38,11 @@ export default function PhotographyPortfolio() {
         <div className="grid grid-cols-3 md:grid-cols-6 gap-1">
           {/* Repeat photos to ensure we fill the 6x4 grid (24 items) if needed */}
           {[...photosData.photos, ...photosData.photos].slice(0, 24).map((photo, index) => (
-            <div
-              key={`${photo.id}-${index}`}
-              onClick={() => setSelectedPhoto(photo)}
-              className="relative group overflow-hidden block aspect-square cursor-pointer"
-            >
-              <Image
-                src={photo.thumbnail}
-                alt={photo.alt}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                sizes="(max-width: 768px) 33vw, 16vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="font-bold text-lg mb-1">{photo.title}</p>
-                  <p className="text-sm text-white/80 capitalize">{photo.category}</p>
-                </div>
-              </div>
-            </div>
+            <PhotoItem 
+              key={`${photo.id}-${index}`} 
+              photo={photo} 
+              onClick={() => setSelectedPhoto(photo)} 
+            />
           ))}
         </div>
       </div>
@@ -67,5 +54,34 @@ export default function PhotographyPortfolio() {
         />
       )}
     </section>
+  )
+}
+
+function PhotoItem({ photo, onClick }: { photo: typeof photosData.photos[0], onClick: () => void }) {
+  const [isLoading, setIsLoading] = useState(true)
+
+  return (
+    <div
+      onClick={onClick}
+      className="relative group overflow-hidden block aspect-square cursor-pointer bg-gray-100"
+    >
+      {isLoading && <Skeleton className="absolute inset-0 z-10" />}
+      <Image
+        src={photo.thumbnail}
+        alt={photo.alt}
+        fill
+        className={`object-cover group-hover:scale-110 transition-all duration-700 ${
+          isLoading ? 'scale-110 blur-xl grayscale' : 'scale-100 blur-0 grayscale-0'
+        }`}
+        sizes="(max-width: 768px) 33vw, 16vw"
+        onLoad={() => setIsLoading(false)}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <p className="font-bold text-lg mb-1">{photo.title}</p>
+          <p className="text-sm text-white/80 capitalize">{photo.category}</p>
+        </div>
+      </div>
+    </div>
   )
 }
