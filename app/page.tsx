@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import siteData from '@/data/site.json'
-import photosData from '@/data/photos.json'
+import sliderPhotosData from '@/data/slider_photos.json'
 import HeroSlider from '@/components/HeroSlider'
 import BenefitsSection from '@/components/BenefitsSection'
 import PhotographyPortfolio from '@/components/PhotographyPortfolio'
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 }
 
 // Top 12 photos for the slider
-const sliderPhotos = photosData.photos.slice(0, 12)
+const sliderPhotos = sliderPhotosData.photos
 
 export default function Home() {
   const jsonLd = {
