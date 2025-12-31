@@ -45,9 +45,9 @@
         "details": "Sony E-mount power zoom lens, compact and lightweight, ideal for versatile everyday shooting from wide-angle to portrait"
       },
       {
-        "name": "50mm f/1.8 Prime Lens",
+        "name": "50mm f/1.8 Prime Lens (APS-C)",
         "image": "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=600&q=80&fit=crop&auto=format",
-        "details": "Fast prime lens with beautiful bokeh, perfect for portraits and low-light photography, excellent sharpness and color rendition"
+        "details": "Sony E 50mm f/1.8 OSS lens for APS-C sensors, fast prime with beautiful bokeh, perfect for portraits and low-light photography on a6000"
       },
       {
         "name": "Sony A7 IV",
@@ -55,9 +55,9 @@
         "details": "33MP full-frame mirrorless camera, 4K 60p video, advanced autofocus with real-time tracking, professional-grade performance"
       },
       {
-        "name": "50mm f/1.8 Prime Lens",
+        "name": "50mm f/1.8 Prime Lens (Full-Frame)",
         "image": "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=600&q=80&fit=crop&auto=format",
-        "details": "Sony FE 50mm f/1.8 full-frame lens, compact design, exceptional image quality for portraits and general photography"
+        "details": "Sony FE 50mm f/1.8 full-frame lens, designed for A7 IV, compact design, exceptional image quality for portraits and general photography"
       },
       {
         "name": "24-70mm f/2.8 G Master II Lens",
