@@ -34,11 +34,46 @@
       "Post-Production Editing"
     ],
     "equipment": [
-      "Canon EOS R5",
-      "Sony A7R IV",
-      "DJI Mavic 3 Pro",
-      "Professional Lighting Equipment",
-      "4K Video Cameras"
+      {
+        "name": "Sony a6000",
+        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244b32a?w=600&q=80&fit=crop&auto=format",
+        "details": "24.3MP APS-C mirrorless camera, 11fps continuous shooting, 179-point autofocus system, perfect for travel and street photography"
+      },
+      {
+        "name": "16-50mm Kit Lens",
+        "image": "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=600&q=80&fit=crop&auto=format",
+        "details": "Sony E-mount power zoom lens, compact and lightweight, ideal for versatile everyday shooting from wide-angle to portrait"
+      },
+      {
+        "name": "50mm f/1.8 Prime Lens",
+        "image": "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=600&q=80&fit=crop&auto=format",
+        "details": "Fast prime lens with beautiful bokeh, perfect for portraits and low-light photography, excellent sharpness and color rendition"
+      },
+      {
+        "name": "Sony A7 IV",
+        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244b32a?w=600&q=80&fit=crop&auto=format",
+        "details": "33MP full-frame mirrorless camera, 4K 60p video, advanced autofocus with real-time tracking, professional-grade performance"
+      },
+      {
+        "name": "50mm f/1.8 Prime Lens",
+        "image": "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=600&q=80&fit=crop&auto=format",
+        "details": "Sony FE 50mm f/1.8 full-frame lens, compact design, exceptional image quality for portraits and general photography"
+      },
+      {
+        "name": "24-70mm f/2.8 G Master II Lens",
+        "image": "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=600&q=80&fit=crop&auto=format",
+        "details": "Professional zoom lens, constant f/2.8 aperture, ultra-fast autofocus, weather-sealed, ideal for weddings and events"
+      },
+      {
+        "name": "Digitek Tripod",
+        "image": "/equipment/digitek-tripod.jpg",
+        "details": "Sturdy and reliable tripod for stable shots, adjustable height, lightweight and portable for on-location shoots"
+      },
+      {
+        "name": "CEA GT240 Sony Tough Memory Card",
+        "image": "/equipment/cea-gt240-memory-card.jpg",
+        "details": "240GB high-speed SD card, UHS-I Class 10, waterproof, shockproof, and temperature resistant for reliable storage"
+      }
     ],
     "style": "My photography style blends documentary authenticity with artistic elegance. I capture genuine emotions and moments that tell your unique story. Whether it's a wedding, a travel adventure, or a commercial shoot, I bring a cinematic eye to every frame."
   },

@@ -125,30 +125,50 @@ export default function AboutPage() {
             <h2 className="text-3xl font-semibold mb-8 text-center text-gray-900">
               Professional Equipment
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {siteData.photographer.equipment.map((item, index) => {
+                const equipmentName = typeof item === 'string' ? item : item.name
+                const equipmentImage = typeof item === 'string' ? null : item.image
+                const equipmentDetails = typeof item === 'string' ? null : item.details
                 const getColorClasses = (idx: number) => {
                   const mod = idx % 3
                   if (mod === 0) return {
                     bg: 'bg-primary-50',
                     border: 'border-primary-200',
-                    text: 'text-primary-700'
+                    text: 'text-primary-700',
+                    detailText: 'text-gray-600'
                   }
                   if (mod === 1) return {
                     bg: 'bg-accent-50',
                     border: 'border-accent-200',
-                    text: 'text-accent-700'
+                    text: 'text-accent-700',
+                    detailText: 'text-gray-600'
                   }
                   return {
                     bg: 'bg-warm-50',
                     border: 'border-warm-200',
-                    text: 'text-warm-700'
+                    text: 'text-warm-700',
+                    detailText: 'text-gray-600'
                   }
                 }
                 const colors = getColorClasses(index)
                 return (
-                  <div key={index} className={`text-center ${colors.bg} ${colors.border} rounded-lg p-4 border hover:shadow-md transition-all`}>
-                    <p className={`${colors.text} font-medium`}>{item}</p>
+                  <div key={index} className={`${colors.bg} ${colors.border} rounded-lg p-4 border hover:shadow-lg transition-all overflow-hidden flex flex-col`}>
+                    {equipmentImage && (
+                      <div className="relative h-48 mb-4 rounded-lg overflow-hidden bg-gray-100">
+                        <Image
+                          src={equipmentImage}
+                          alt={equipmentName}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
+                      </div>
+                    )}
+                    <h3 className={`${colors.text} font-semibold text-center mb-2`}>{equipmentName}</h3>
+                    {equipmentDetails && (
+                      <p className={`${colors.detailText} text-sm text-center leading-relaxed`}>{equipmentDetails}</p>
+                    )}
                   </div>
                 )
               })}
